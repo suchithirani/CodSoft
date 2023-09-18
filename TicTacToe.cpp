@@ -4,8 +4,8 @@ using namespace std;
 void Board(char board[4][4]) {
     cout<<endl<<endl;
 
-    for(int i=0;i<3;i++) {
-        for(int j=0; j<3;j++) {
+    for(int i=0;i<3;i++){
+        for(int j=0; j<3;j++){
             cout<<board[i][j];
             if (j<2) 
             cout << " | ";
@@ -94,10 +94,10 @@ int main() {
             Board(board);
             if(currentMove==temp)
             {
-                cout<<" Congratulations! "<<s1<<" you won the game."<<endl;
+                cout<<" Congratulations! "<<s1<<" you won the game."<<endl<<endl;
             }
             else{
-            cout<<" Congratulations! "<<s2<<" you won the game."<<endl;
+            cout<<" Congratulations! "<<s2<<" you won the game."<<endl<<endl;
             }
             break;
         }
@@ -110,12 +110,12 @@ int main() {
     
         currentMove=(currentMove=='X')?'O':'X';
     }
-    cout<<"want to play another game(y,n):";
+    cout<<"want to play another game(y,n):"<<endl;
     cin>>play;
     }
     else
     {
-        cout<<"compile and enter (O,X)";
+        cout<<"compile again and enter (O,X)";
         exit (0);
     }
     }
