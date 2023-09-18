@@ -9,9 +9,9 @@ class ToDoList
     bool completed;
     string data;
 };
-    void displayTask(ToDoList Task[],int NumberOfTasks)
+    void displayTask(ToDoList Task[],int NumberOfTasks,string title)
     {
-        
+        cout<<title<<endl;
         for(int i=0;i<NumberOfTasks;++i)
         {
             
@@ -52,10 +52,14 @@ int main()
     ToDoList Task[MaxTasks];
     int choice;
     int NumberOfTasks=0;
-    
+    string title;
+    cout<<endl<<"To-Do-List"<<endl<<endl;
+    cout<<"write Subject of Tasks: "<<endl;
+    getline(cin,title);
+    cout<<endl;
     do
     {
-        cout<<"To-Do-List"<<endl<<endl;
+        
         cout<<" 1. Add Task"<<endl; 
         cout<<" 2. View Task"<<endl;
         cout<<" 3. Mark Task as Completed"<<endl; 
@@ -81,7 +85,7 @@ int main()
                 break;
             case 2:
 
-                displayTask(Task,NumberOfTasks);
+                displayTask(Task,NumberOfTasks,title);
                 break;
 
             case 3:
