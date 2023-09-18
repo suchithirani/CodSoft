@@ -5,28 +5,28 @@ using namespace std;
 //g++ RandomNumberGame.cpp
 int main()
 {
-    int SecretNumber,tooHigh,tooLow;
-    int LowerLimit,HigherLimit;
+    int RandomNumber,tooHigh,tooLow;
+    int LowerLimit,UpperLimit;
 
-    cout<<"Enter Lower and Higher number in which you like to guess the number :"<<endl<<endl;
-    cout<<"Enter lower number: "<<endl;
+    cout<<" Lower and Higher number in which you like to guess the number "<<endl<<endl;
+    cout<<"Enter Lower limit: "<<endl;
     cin>>LowerLimit;
-    cout<<"Enter higher number"<<endl;
-    cin>>HigherLimit;
-    SecretNumber=rand();
-    SecretNumber=rand()%(HigherLimit-LowerLimit)+LowerLimit;
+    cout<<"Enter Upper limit"<<endl;
+    cin>>UpperLimit;
+    
+    RandomNumber=rand()%(UpperLimit-LowerLimit)+LowerLimit;
     int number;
     int guess=0;
     cout<<"Random Number Game"<<endl;
-    while(number!=SecretNumber)
+    while(number!=RandomNumber)
     {
         cout<<"Try to guess the SecretNumber :";
         cin>>number;
-        if(number>SecretNumber)
+        if(number>RandomNumber)
         {
             cout<<"Number is too high"<<endl;
         }
-        else if(number<SecretNumber)
+        else if(number<RandomNumber)
         {
             cout<<"Number is too low"<<endl;
         }
